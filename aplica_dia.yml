@@ -4,11 +4,7 @@
   serial: 80
     
   tasks:
-    
-     - name: Desabilitando o VSS para liberar espaco em disco 
-       win_shell: "vssadmin delete shadows /For=C: /quiet"
-       
-
+           
       
      - name: Checando espaco em disc
        win_shell: Get-PSDrive C | Select-Object Free | ft -HideTableHeaders

@@ -8,10 +8,7 @@
      - name: Desabilitando o VSS para liberar espaco em disco 
        win_shell: "vssadmin delete shadows /For=C: /quiet"
        
-     - name: Apagando a task de Shadow Copies
-       win_shell: Unregister-ScheduledTask -Taskname "ShadowCopyVolume*" -Confirm:$false
 
-     
       
      - name: Checando espaco em disc
        win_shell: Get-PSDrive C | Select-Object Free | ft -HideTableHeaders

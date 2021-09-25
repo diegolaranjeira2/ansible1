@@ -21,7 +21,10 @@
          msg: 'Diretorio C: tem espaco livre. Iniciando a instalacao de updates'
          
 
-         
+     - name: Reiniciando o servidor parar evitar boot pendente
+       win_reboot:
+         reboot_timeout: 3600
+
      - name: Instalando Updates nas maquinas de Producao (Isso pode levar um tempo)
        win_updates:
          category_names:
@@ -29,5 +32,7 @@
            - CriticalUpdates
            - UpdateRollups
            - Updates
-         reboot: no
+         reboot: yes
+         reboot_timeout: 3600
+
      

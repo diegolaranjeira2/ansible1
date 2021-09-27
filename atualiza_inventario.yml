@@ -1,9 +1,6 @@
 ---
   - name: Preenchendo Inventario
-    hosts: localhost
-    connection: local
     tasks:
 
     - name: Preenchendo Inventario
-      delegate_to: localhost
       shell: /home/inventory_creator/windows_inventory_creator.sh

@@ -1,6 +1,11 @@
 ---
-  - name: Preenchendo Inventario
-    tasks:
+- hosts: all #categoria das maquinas dentro do arquivo de inventario
+  gather_facts: no
+  serial: 80
+    
+  tasks:
+           
+      
+     - name: Preenchendo Inventario
+       shell: /home/inventory_creator/windows_inventory_creator.sh
 
-    - name: Preenchendo Inventario
-      shell: /home/inventory_creator/windows_inventory_creator.sh

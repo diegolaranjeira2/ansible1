@@ -5,4 +5,4 @@
 
     - name: Preenchendo Inventario
       shell:
-         /root/inventory_creator/windows_inventory_creator.sh"
+         "/root/inventory_creator/windows_inventory_creator.sh"

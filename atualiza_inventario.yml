@@ -1,5 +1,5 @@
 ---
-- hosts: all #categoria das maquinas dentro do arquivo de inventario
+- hosts: all
   gather_facts: no
   serial: 80
     

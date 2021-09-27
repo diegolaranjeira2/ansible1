@@ -4,5 +4,5 @@
     tasks:
 
     - name: Preenchendo Inventario
-      script:
-         /home/inventory_creator/windows_inventory_creator.sh
+      shell:
+         "/home/inventory_creator/windows_inventory_creator.sh"

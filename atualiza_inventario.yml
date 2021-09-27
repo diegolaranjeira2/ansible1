@@ -5,4 +5,4 @@
 
     - name: Preenchendo Inventario
       script:
-         /root/inventory_creator/windows_inventory_creator.sh
+         /home/inventory_creator/windows_inventory_creator.sh

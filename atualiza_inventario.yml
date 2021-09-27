@@ -5,4 +5,5 @@
 
     - name: Preenchendo Inventario
       delegate_to: localhost
-      script: /home/inventory_creator/windows_inventory_creator.sh
+      script:
+         cmd: /home/inventory_creator/windows_inventory_creator.sh

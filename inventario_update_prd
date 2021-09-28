@@ -1,4 +1,2 @@
-control ansible_connection=local
-
 [prod]
 172.16.26.97

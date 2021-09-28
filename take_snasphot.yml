@@ -20,7 +20,7 @@
       #username: "{{ VMWARE_USER }}"
       #password: "{{ VMWARE_PASSWORD }}"
       validate_certs: False
-      #datacenter: "{{ datacenter_name }}"
+      datacenter: "DC-PRODUCAO"
       folder: "/{{ vm_folder }}/vm/"
       name: "{{ inventory_hostname }}"
       state: present

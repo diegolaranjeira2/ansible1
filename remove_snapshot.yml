@@ -11,7 +11,7 @@
     delegate_to: localhost
     register: vm_folder
     
-  - name: Efetuando o snapshot das VMS
+  - name: Removendo o snapshot das VMS
     vmware_guest_snapshot:
       validate_certs: False
       datacenter: "DC-PRODUCAO"

@@ -7,17 +7,17 @@
   - name: Encontrando as VMs no Ambiente
     vmware_guest_find:
       validate_certs: no
-      name: "118634-CORE-INSTANCE-N-PR-D-CPXAQT-1-A89A92WIN-Z2"
+      name: "{{ inventory_hostname }}"
     delegate_to: localhost
     register: vm_folder
     
-#  - name: Efetuando o snapshot das VMS
-#    vmware_guest_snapshot:
-#      validate_certs: False
-#      datacenter: "DC-PRODUCAO"
-#      folder: "/{{ vm_folder }}/vm/"
-#      name: "{{ inventory_hostname }}"
-#      state: present
-#      snapshot_name: "WINDOWS_UPDATE_SNAPSHOT"
-#      description: SNAPSHOT CAPTURADO PELO ANSIBLE ANTES DE APLICAR UPDATES NO AMBIENTE
-#    delegate_to: localhost
+  - name: Efetuando o snapshot das VMS
+    vmware_guest_snapshot:
+      validate_certs: False
+      datacenter: "DC-PRODUCAO"
+      folder: "/{{ vm_folder }}/vm/"
+      name: "{{ inventory_hostname }}"
+      state: present
+      snapshot_name: "WINDOWS_UPDATE_SNAPSHOT"
+      description: SNAPSHOT CAPTURADO PELO ANSIBLE ANTES DE APLICAR UPDATES NO AMBIENTE
+    delegate_to: localhost

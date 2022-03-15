@@ -7,7 +7,7 @@
   - name: Encontrando as VMs no Ambiente
     vmware_guest_find:
       validate_certs: no
-      name: "{{ inventory_hostname }}"
+      name: "118634-CORE-INSTANCE-N-PR-D-CPXAQT-1-A89A92WIN-Z2"
     delegate_to: localhost
     register: vm_folder
     

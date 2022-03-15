@@ -11,13 +11,13 @@
     delegate_to: localhost
     register: vm_folder
     
-  - name: Efetuando o snapshot das VMS
-    vmware_guest_snapshot:
-      validate_certs: False
-      datacenter: "DC-PRODUCAO"
-      folder: "/{{ vm_folder }}/vm/"
-      name: "{{ inventory_hostname }}"
-      state: present
-      snapshot_name: "WINDOWS_UPDATE_SNAPSHOT"
-      description: SNAPSHOT CAPTURADO PELO ANSIBLE ANTES DE APLICAR UPDATES NO AMBIENTE
-    delegate_to: localhost
+#  - name: Efetuando o snapshot das VMS
+#    vmware_guest_snapshot:
+#      validate_certs: False
+#      datacenter: "DC-PRODUCAO"
+#      folder: "/{{ vm_folder }}/vm/"
+#      name: "{{ inventory_hostname }}"
+#      state: present
+#      snapshot_name: "WINDOWS_UPDATE_SNAPSHOT"
+#      description: SNAPSHOT CAPTURADO PELO ANSIBLE ANTES DE APLICAR UPDATES NO AMBIENTE
+#    delegate_to: localhost
